@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Generate creative WhatsApp bios and statuses for any mood or occasion. Available in multiple languages. Free and easy to use!">
+    <meta name="keywords" content="whatsapp status, whatsapp bio, status generator, attitude status, love status, sad status, friendship, motivation, funny,Success, Emotional Status">
+    <title>WhatsApp Status Generator | Create Bio & Status in Multiple Languages</title>
+    <link rel="icon" href="assets/images/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <meta property="og:title" content="WhatsApp Bio & Status Generator">
+    <meta property="og:description" content="Create amazing WhatsApp bios & statuses in seconds for any mood or occasion.">
+    <meta property="og:image" content="assets/images/og-image.png">
+    <meta property="og:url" content="YOUR_WEBSITE_URL_HERE">
+    <meta name="twitter:card" content="summary_large_image">
+</head> -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Basic SEO -->
+    <title>WhatsApp Status Generator | Create Bio & Status in Multiple Languages</title>
+    <meta name="description" content="Generate creative WhatsApp bios and statuses for any mood or occasion. Available in English, Hindi, Urdu, Arabic & more. Copy, share, and download statuses instantly.">
+    <meta name="keywords" content="whatsapp status, whatsapp bio, status generator, attitude status, love status, sad status, friendship, motivation, funny, success, emotional status, islamic status, hindi status, urdu status, arabic bio generator">
+    <meta name="author" content="Shoaib Tanweer or Team members">
+    <meta name="robots" content="index, follow">
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Open Graph for Facebook & WhatsApp -->
+    <meta property="og:title" content="WhatsApp Bio & Status Generator">
+    <meta property="og:description" content="Create amazing WhatsApp bios & statuses in seconds for any mood or occasion. Available in multiple languages.">
+    <meta property="og:image" content="https://status.incwi.com/assets/images/og-image.jpg">
+    <meta property="og:url" content="https://status.incwi.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="WhatsApp Bio & Status Generator">
+    <meta name="twitter:description" content="Generate and share awesome WhatsApp statuses with ease — love, sad, funny, and more.">
+    <meta name="twitter:image" content="https://status.incwi.com/assets/images/og-image.jpg">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://status.incwi.com/">
+
+    <!-- Manifest (for PWA or better mobile experience later) -->
+    <!-- <link rel="manifest" href="/manifest.json"> -->
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            
+            <div class="logo"> 
+                <i class="fab fa-whatsapp"></i>
+                <span>StatusGenerator</span>
+            </div>
+            
+            <div class="tagline">Create amazing WhatsApp bios & statuses in seconds!</div>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="generator-section">
+            <h2 class="section-title"><i class="fas fa-magic"></i> Create Your Status</h2>
+
+            <div class="form-group">
+                <label for="mood">Select Mood/Category</label>
+                <div class="categories-container">
+                    <div class="category active" data-mood="love">
+                        <i class="fas fa-heart"></i>
+                        <span class="category-name">Love</span>
+                    </div>
+                    <div class="category" data-mood="attitude">
+                        <i class="fas fa-fire"></i>
+                        <span class="category-name">Attitude</span>
+                    </div>
+                    <div class="category" data-mood="sad">
+                        <i class="fas fa-sad-tear"></i>
+                        <span class="category-name">Sad</span>
+                    </div>
+                    <div class="category" data-mood="islamic">
+                        <i class="fas fa-mosque"></i>
+                        <span class="category-name">Islamic</span>
+                    </div>
+                    <div class="category" data-mood="funny">
+                        <i class="fas fa-laugh-beam"></i>
+                        <span class="category-name">Funny</span>
+                    </div>
+                    <div class="category" data-mood="friendship">
+                        <i class="fas fa-user-friends"></i>
+                        <span class="category-name">Friendship</span>
+                    </div>
+                </div>
+
+                <button class="expand-btn" id="expand-categories">
+                    <i class="fas fa-chevron-down"></i> More Categories
+                </button>
+
+                <div class="expanded-categories" id="expanded-categories">
+                    <div class="category" data-mood="breakup">
+                        <i class="fas fa-heart-broken"></i>
+                        <span class="category-name">Breakup</span>
+                    </div>
+                    <div class="category" data-mood="motivation">
+                        <i class="fas fa-trophy"></i>
+                        <span class="category-name">Motivation</span>
+                    </div>
+                    <div class="category" data-mood="birthday">
+                        <i class="fas fa-birthday-cake"></i>
+                        <span class="category-name">Birthday</span>
+                    </div>
+                    <div class="category" data-mood="life">
+                        <i class="fas fa-seedling"></i>
+                        <span class="category-name">Life</span>
+                    </div>
+                    <div class="category" data-mood="alone">
+                        <i class="fas fa-user-alt"></i>
+                        <span class="category-name">Alone</span>
+                    </div>
+                    <div class="category" data-mood="success">
+                        <i class="fas fa-medal"></i>
+                        <span class="category-name">Success</span>
+                    </div>
+                    <div class="category" data-mood="morningnight">
+                        <i class="fas fa-sun"></i>
+                        <span class="category-name">Morning/Night</span>
+                    </div>
+                    <div class="category" data-mood="thoughts">
+                        <i class="fas fa-brain"></i>
+                        <span class="category-name">Thoughts</span>
+                    </div>
+                    <div class="category" data-mood="emotional">
+                        <i class="fas fa-sad-cry"></i>
+                        <span class="category-name">Emotional</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="language">Select Language</label>
+                    <select id="language">
+                        <option value="english">English</option>
+                        <option value="hindi">Hindi</option>
+                        <option value="urdu">Urdu</option>
+                        <option value="arabic">Arabic</option>
+                        <option value="bengali">Bengali</option>
+                        <option value="farsi">Farsi</option>
+                        <option value="chinese">Chinese</option>
+                        <option value="russian">Russian</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="quantity">Number of Statuses</label>
+                    <select id="quantity">
+                        <option value="5">5 Statuses</option>
+                        <option value="8" selected>8 Statuses</option>
+                        <option value="10">10 Statuses</option>
+                    </select>
+                </div>
+            </div>
+
+            <button id="generate-btn" class="generate-btn">
+                <i class="fas fa-bolt"></i> Generate Statuses
+            </button>
+        </section>
+
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p>Generating creative statuses for you...</p>
+        </div>
+
+        <section class="results-container" id="results-container">
+            <h2 class="section-title"><i class="fas fa-list"></i> Generated Statuses</h2>
+
+            <div id="status-results">
+                </div>
+
+            <button id="generate-more-btn" class="generate-btn" style="margin-top: 20px; display: none;">
+                <i class="fas fa-sync"></i> Generate More
+            </button>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="contact-us.html">Contact Us</a>
+                    <a href="terms.html">Terms of Service</a>
+                </div>
+                <div class="social-icons">
+                    <a href="mailto:support@incwi.com" target="_blank"><i class="fas fa-envelope"></i></a>
+                    <a href="https://www.facebook.com/share/1713M2YnJe/" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://youtube.com/@incwi-786" target="_blank"><i class="fab fa-youtube"></i></a>
+                </div>
+                <div class="copyright">
+                    &copy; 2025 WhatsApp Status Generator. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="toast" id="toast">Status copied to clipboard!</div>
+
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

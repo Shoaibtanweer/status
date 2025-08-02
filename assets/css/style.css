@@ -1,0 +1,416 @@
+:root {
+    --primary: #25D366;
+    --primary-dark: #128C7E;
+    --secondary: #075E54;
+    --light: #F0F2F5;
+    --dark: #3B4A54;
+    --text: #111B21;
+    --card-bg: #FFFFFF;
+    --shadow: rgba(11, 20, 26, 0.08);
+    --success: #34B7F1;
+    --danger: #FF453A;
+    --warning: #FF9500;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: var(--light);
+    color: var(--text);
+    line-height: 1.6;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(135deg, var(--secondary), var(--primary-dark));
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+    box-shadow: 0 4px 12px var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.logo i {
+    font-size: 2rem;
+}
+
+.tagline {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    margin-top: 5px;
+}
+
+/* Generator Section */
+.generator-section {
+    background-color: var(--card-bg);
+    border-radius: 16px;
+    box-shadow: 0 6px 16px var(--shadow);
+    margin: 30px 0;
+    padding: 25px;
+    overflow: hidden;
+}
+
+.section-title {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    color: var(--secondary);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.section-title i {
+    color: var(--primary);
+}
+
+/* Form Controls */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--dark);
+}
+
+select, button {
+    width: 100%;
+    padding: 14px 16px;
+    border-radius: 12px;
+    border: 1px solid #e0e0e0;
+    font-size: 1rem;
+    background-color: var(--card-bg);
+    color: var(--text);
+    transition: all 0.3s ease;
+}
+
+select:focus {
+    border-color: var(--primary);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(37, 211, 102, 0.2);
+}
+
+.generate-btn {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: white;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 1.1rem;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.generate-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(37, 211, 102, 0.3);
+}
+
+.generate-btn:active {
+    transform: translateY(0);
+}
+
+/* Mood Categories */
+.categories-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.category {
+    background-color: white;
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    box-shadow: 0 2px 8px var(--shadow);
+}
+
+.category:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px var(--shadow);
+    border-color: var(--primary);
+}
+
+.category.active {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: white;
+    border-color: var(--primary-dark);
+}
+
+.category i {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.category-name {
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+/* Results Section */
+.results-container {
+    display: none;
+    margin-top: 30px;
+}
+
+.status-card {
+    background-color: var(--card-bg);
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px var(--shadow);
+    position: relative;
+    border-left: 4px solid var(--primary);
+}
+
+.status-text {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    line-height: 1.7;
+}
+
+.status-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+ /* FIX: Adjusted status actions for better mobile responsiveness */
+        /* .status-actions {
+            display: flex;
+            gap: 10px;
+            justify-content: flex-end;
+            flex-wrap: wrap; /* Allows buttons to wrap to a new line */
+        /* } */ */
+
+.action-btn {
+    padding: 10px 16px;
+    border-radius: 50px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.copy-btn {
+    background-color: #e3f2fd;
+    color: var(--success);
+}
+
+.share-btn {
+    background-color: #e8f5e9;
+    color: var(--primary-dark);
+}
+
+.download-btn {
+    background-color: #f1f8e9;
+    color: var(--warning);
+}
+
+.action-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Expandable Categories */
+.expand-btn {
+    background-color: #f5f5f5;
+    border: none;
+    padding: 12px;
+    text-align: center;
+    font-weight: 600;
+    color: var(--dark);
+    border-radius: 12px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.expanded-categories {
+    display: none;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark);
+    color: white;
+    padding: 30px 0;
+    margin-top: 40px;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer-links a {
+    color: #a7b6c2;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: var(--primary);
+}
+
+.social-icons {
+    display: flex;
+    gap: 20px;
+    font-size: 1.5rem;
+}
+
+.social-icons a {
+    color: #a7b6c2;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: var(--primary);
+}
+
+.copyright {
+    font-size: 0.9rem;
+    color: #a7b6c2;
+}
+/* i add this neww code to reponsives to mobil  */
+/* Responsive Design */
+        @media (max-width: 480px) {
+            .status-actions {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .action-btn {
+                flex-grow: 1;
+                text-align: center;
+            }
+        }
+
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .generator-section {
+        padding: 30px;
+    }
+
+    .categories-container {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    }
+
+    .form-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+}
+
+@media (min-width: 992px) {
+    .form-row {
+        grid-template-columns: 2fr 1fr;
+    }
+}
+
+/* Loading Animation */
+.loading {
+    display: none;
+    text-align: center;
+    padding: 30px;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(37, 211, 102, 0.2);
+    border-top: 5px solid var(--primary);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 20px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Toast Notification */
+.toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--primary);
+    color: white;
+    padding: 15px 25px;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.toast.show {
+    transform: translateY(0);
+    opacity: 1;
+}
